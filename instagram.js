@@ -4,9 +4,9 @@ const {Facebook, FacebookApiException} = require('fb');
 const FB = new Facebook();
 let connection = mysql.createConnection({
     host: 'localhost',
-    user: 'wonen_2',
-    password: 'qwaszx123',
-    database: 'wonen_2',
+    user: '',
+    password: '',
+    database: '',
     charset: 'utf8mb4_bin'
 });
 
@@ -19,7 +19,7 @@ connection.connect(function(err) {
 
 
     }
-    FB.api('17841400261636871/', { fields: 'media.limit(85){insights.metric(impressions),permalink,caption,timestamp,id}', access_token:'EAADGAMZAy2GEBADhnyZBScKWDMEmZBi5DSvjVD0lb1OFKus0lb8szOKm1sRBpw57KJbbCvaJGQdjhlAvNR2xIZCRtNdlP6mplI3ZA1KoEZAiUSRQ35lPLGtkEgZCtvHihvWsS9FB7ZB3JZAWHgEvqb0cmamVglBXlq1oZD' }, function (res) {
+    FB.api('/', { fields: 'media.limit(85){insights.metric(impressions),permalink,caption,timestamp,id}', access_token:'' }, function (res) {
         let stringify = JSON.stringify(res.media.data);
         let parsed = JSON.parse(stringify);
 
