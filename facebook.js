@@ -6,9 +6,9 @@ const FB = new Facebook();
 let cheerio = require('cheerio');
 let connection = mysql.createConnection({
     host: 'localhost',
-    user: 'wonen_2',
-    password: 'qwaszx123',
-    database: 'wonen_2',
+    user: '',
+    password: '',
+    database: '',
     charset: 'utf8mb4_bin'
 });
 
@@ -21,7 +21,7 @@ connection.connect(function(err) {
 
 
     }
-    FB.api('me/feed', { fields: 'insights.metric(post_impressions_unique),id,message,created_time,link',limit: 100, access_token:'EAADGAMZAy2GEBALVceC2OmQI5NJk2FC9UQRPfOY00Th8CctXCQ5hNFkdUmKsbVK7XgsiZA81GP6trvjwPRle0moD8y81WZAFZAhEoHdABoOjfZCl0st4yQG4hzY6nb7mbHA1oqp6ZA7ZAQgS0tZAf2PQYHFrpUuiJYiTrBfD3hQjxAZDZD' }, function (res) {
+    FB.api('me/feed', { fields: 'insights.metric(post_impressions_unique),id,message,created_time,link',limit: 100, access_token:'' }, function (res) {
        let stringify = JSON.stringify(res.data);
        let parsed = JSON.parse(stringify);
 
