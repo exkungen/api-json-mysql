@@ -1,16 +1,16 @@
 //Copyright menouer nobach -  www.menouernobach.nl
 let PDK = require('node-pinterest');
-let pinterest = PDK.init('AXTOWu2aFM1nPq5VXwer9i01cqCfFTmB1v3Njd5FBHbp-GA3xAAAAAA');
+let pinterest = PDK.init('');
 let mysql = require('mysql');
 let moment = require('moment');
 
 
 
 let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'wonen_2',
-    password: 'qwaszx123',
-    database: 'wonen_2',
+    host: '',
+    user: '',
+    password: '',
+    database: '',
 });
 
 
