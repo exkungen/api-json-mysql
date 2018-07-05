@@ -3,19 +3,19 @@ let moment = require('moment');
 let mysql = require('mysql');
 
 let client = new Twitter({
-    consumer_key: 'wHOEHaDBqKyuN6YGRn3aDhVSA',
-    consumer_secret: 'Bfze4blPkhCBI8Z27bsaFlAfWVcU6pyrjkdgkwabXhMph5GuHT',
-    access_token_key: '102926425-3S56XvCqBoJUO4brZw9n1Nl9G4yVHfs30CjA3JxY',
-    access_token_secret: 'X2m8lhZOL8BvCrdE6HXlGpnstHNPG45ZCZu8lVxy36p0M'
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '',
+    access_token_secret: ''
 });
 
 
 
 let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'wonen_2',
-    password: 'qwaszx123',
-    database: 'wonen_2',
+    host: '',
+    user: '',
+    password: '',
+    database: '',
     charset: 'utf8mb4_bin'
 });
 
@@ -31,7 +31,7 @@ connection.connect(function(err) {
 
 
 
-    let params = {user_id: '102926425', count: '200', id: '1'};
+    let params = {user_id: '', count: '200', id: '1'};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (error) {
             console.log(error);
