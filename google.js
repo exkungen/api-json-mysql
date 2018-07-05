@@ -4,14 +4,14 @@ var moment = require('moment');
 var {google} = require('googleapis');
 var plus = google.plus('v1');
 
-var API_KEY = 'AIzaSyA5MwgSiHhAvrEPngrV1gTepcbgN2z-_vs';
+var API_KEY = '-_vs';
 
 
 var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'wonen_2',
-    password: 'qwaszx123',
-    database: 'wonen_2'
+    user: '',
+    password: '',
+    database: ''
 });
 
 connection.connect(function (err) {
@@ -26,7 +26,7 @@ connection.connect(function (err) {
 
     plus.activities.list({
         auth: API_KEY,
-        userId: '107394136213845021046',
+        userId: '',
         collection: 'public',
 		fields: 'id,items',
 		maxResults: '100'
